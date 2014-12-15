@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(content="text/html; charset=utf-8", http-equiv="Content-type")
+    meta(name="HandheldFriendly", content="true")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="msapplication-TileColor", content="#ffffff")
+    meta(name="msapplication-TileImage", content="/images/favicon.png")
+    meta(property='og:image', content='/images/favicon.png')
+    meta(name='twitter:image', content='/images/favicon.png')
+    link(rel='stylesheet', href='/stylesheets/the.min.css?v=1.0.0')
+    link(rel='shortcut icon', href="/images/favicon.png")
+  body
+    for shot in shots
+        img(src="#{shot.images.normal}")
+        blockquote !{shot.description}

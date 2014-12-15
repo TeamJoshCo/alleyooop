@@ -1,0 +1,32 @@
+{
+  "name": "alley-oop",
+  "version": "0.0.1",
+  "description": "Newsletter service for dribbble",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "*",
+    "koa": "~0.14.0",
+    "koa-compress": "^1.0.8",
+    "koa-favi": "^0.1.0",
+    "koa-jade": "^0.3.1",
+    "koa-request": "^1.0.0",
+    "koa-route": "^2.4.0",
+    "mailchimp": "^1.1.0",
+    "request": "^2.51.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "newsletter",
+    "service",
+    "dribbble"
+  ],
+  "engines": {
+    "node": "0.11.13"
+  },
+  "author": "jbckmn <email@andjosh.com>",
+  "license": "ISC"
+}
