@@ -18,5 +18,6 @@ html(lang="en")
         tr
             for shot in shots
                 td(style="")
-                    img(src="#{shot.images.normal}", style="margin:0 auto;display:block;")
+                    a(href="#{shot.html_url}")
+                        img(src="#{shot.images.normal}", style="margin:0 auto;display:block;")
                     div !{shot.description}
