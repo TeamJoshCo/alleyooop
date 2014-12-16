@@ -14,6 +14,9 @@ html(lang="en")
     link(rel='stylesheet', href='/stylesheets/the.min.css?v=1.0.0')
     link(rel='shortcut icon', href="/images/favicon.png")
   body
-    for shot in shots
-        img(src="#{shot.images.normal}")
-        blockquote !{shot.description}
+    table
+        tr
+            for shot in shots
+                td(style="")
+                    img(src="#{shot.images.normal}", style="margin:0 auto;display:block;")
+                    div !{shot.description}

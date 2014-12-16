@@ -1,4 +1,21 @@
 extends layout
 
 block content
-  h1 Hello
+  .first
+    h1 Alley-oop
+    p.tagline The <a href="http://dribbble.com" target="_blank">Dribbble</a> newsletter service.
+    p.desc Sign up for weekly/monthly round ups of the most popular posts on Dribbble - delivered right to your inbox.
+  .second
+    h3 General Shots
+    button#general Keep me updated!
+  .third
+    h3 Animated Shots
+    button#animated Keep me movin'!
+  script(type="text/javascript", src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js", data-dojo-config="usePlainJson: true, isDebug: false").
+  script(type="text/javascript").
+    document.getElementById('general').addEventListener('click', function(e){
+      require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"1eebaff46609c8040a88eb538","lid":"0af4617a05"}) })
+    }, false);
+    document.getElementById('animated').addEventListener('click', function(e){
+      require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"1eebaff46609c8040a88eb538","lid":"0af4617a05"}) })
+    }, false);
