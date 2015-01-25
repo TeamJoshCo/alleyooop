@@ -39,7 +39,7 @@ app.use(route.get('/play', (new Mailer).gen));
 app.use(route.get('/play/:name', (new Crawler).gen));
 app.use(route.get('/', function* () {
   yield this.render('index', {
-    title: 'hello'
+    title: 'Alleyoop'
   });
 }));
 

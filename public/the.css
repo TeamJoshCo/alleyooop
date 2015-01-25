@@ -1,108 +1,68 @@
 body {
--webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
-  font-family: Helvetica;
-  background-color: #ffffff;
-  max-width: 600px;
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; 
+  line-height: 1.6;
+  font-family: 'Lato', Helvetica, sans-serif;
+  background-color: #293848;
   margin:0 auto;
-  font-size: 16px;
+  font-size: 18px;
+  color: #ddd;
 }
 img {
 max-width: 100%;
 }
 a{
   text-decoration: none;
+  color: #fff;
+  font-weight: 700;
 }
 table{
   border-collapse: collapse;
+  max-width: 900px;
+  margin:50px auto;
 }
-.title-row{
-
+h1{
+  color: white;
+  font-size: 3em;
+  margin:0px;
+  font-family: 'Droid Sans', Helvetica, sans-serif;
 }
-.title-row h1{
-  margin: 0 0;
-}
-.title-row td{
-  border-bottom:2px solid #ddd;
-}
-.title-row .shot-td-img{
-  text-align: left;
-}
-.title-dates{
-  color: #aaa;
-}
-.shot-row{
-
-}
-.shot-row:nth-child(even){
-  background: #f9fafc;
-}
-.shot-td-author{
-  width: 10%;
+.td-example{
   text-align: center;
 }
-.shot-a-author{
-  display: block;
+.td-example img{
+  max-height: 600px;
+  border-radius: 5px;
 }
-.shot-author-img{
-  border-radius: 50%;
-  max-width: 30px;
+.td-copy{
+  padding: 0 8%;
+  width: 65%;
 }
-.shot-a-dribbble{
-  display: block;
+.favicon{
+  max-width: 45px;
+  margin-right: 10px;
 }
-.shot-dribbble-img{
-  max-width: 20px;
-}
-.shot-twitter-img{
-  max-width: 16px;
-}
-.shot-td-img{
-  width: 40%;
-  padding: 20px;
-  text-align: center;
-}
-.shot-a-img{}
-.shot-img{}
-.shot-td-det{}
-.shot-title{
-  display: block;
-  color: #555;
-  font-weight:700; 
-}
-.shot-author{
-  font-weight: 700;
-  display: block;
-  color: #2497EE;
-  font-size: 0.9em;
-}
-.shot-divvy{
+.td-copy hr{
   width: 25%;
-  margin: 10px 75% 10px 0;
-}
-.shot-views{
-  font-size: 0.8em;
-  color: #aaa;
-}
-.shot-likes{
-  color: #aaa;
-  font-size: 0.8em;
-  height: 20px;
-  overflow: hidden;
-}
-.shot-date{
-  color: #FF5996;
-  font-size: 0.7em;
-  font-weight: 700;
-}
-.shot-views-icon{
-  margin-right: 5px;
-}
-.shot-likes-icon{
-  margin: 4px 5px 0 1px;
-  width: 12px;
-  vertical-align: top;
+  margin: 0.5em 0;
 }
 
+#mc_embed_signup{
+  background:#293848; 
+  clear:left; 
+  font:16px 'Lato',sans-serif; 
+}
+#mc_embed_signup form{
+  padding: 0;
+}
+#mc_embed_signup .mc-field-group input{
+  max-width: 300px;
+  background:#ddd;
+  font-family: 'Lato';
+  border-radius: 3px;
+}
+#mc-embedded-subscribe.button{
+  background: #2497EE;
+}
 
 
 @media only screen and (max-width: 640px) {

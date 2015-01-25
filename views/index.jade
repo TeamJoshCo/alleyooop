@@ -1,21 +1,50 @@
 extends layout
 
 block content
-  .first
-    h1 Alley-oop
-    p.tagline The <a href="http://dribbble.com" target="_blank">Dribbble</a> newsletter service.
-    p.desc Sign up for weekly/monthly round ups of the most popular posts on Dribbble - delivered right to your inbox.
-  .second
-    h3 General Shots
-    button#general Keep me updated!
-  .third
-    h3 Animated Shots
-    button#animated Keep me movin'!
-  script(type="text/javascript", src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js", data-dojo-config="usePlainJson: true, isDebug: false").
-  script(type="text/javascript").
-    document.getElementById('general').addEventListener('click', function(e){
-      require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"1eebaff46609c8040a88eb538","lid":"0af4617a05"}) })
-    }, false);
-    document.getElementById('animated').addEventListener('click', function(e){
-      require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"1eebaff46609c8040a88eb538","lid":"0af4617a05"}) })
-    }, false);
+  table.main-wrap
+    tbody
+      tr
+        td.td-example
+          img(src="/example.png", alt="Example Alleyooop newsletter", title="Example Alleyooop newsletter")
+        td.td-copy
+          h1
+            img(src="/favicon-dark.png", alt="Alleyooop").favicon
+            | Alleyooop
+          p Don't have time to check <a href="http://dribbble.com", target="_blank">Dribbble</a> for the latest and greatest? We got the hookup: the most popular projects sent straight to your inbox, weekly.
+          // Begin MailChimp Signup Form
+          #mc_embed_signup
+            form#mc-embedded-subscribe-form.validate(action='//bckmn.us3.list-manage.com/subscribe/post?u=1eebaff46609c8040a88eb538&id=0af4617a05', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+              #mc_embed_signup_scroll
+                .mc-field-group
+                  label(for='mce-EMAIL') Email Address 
+                  | &#x9;
+                  input#mce-EMAIL.required.email(type='email', value='', name='EMAIL')
+                .mc-field-group.input-group
+                  strong What type of shooter are you? 
+                  |     
+                  ul
+                    li
+                      input#mce-TYPEOFSHOT-0(type='radio', value='Regular Shots', name='TYPEOFSHOT')
+                      label(for='mce-TYPEOFSHOT-0') Regular Shots
+                    li
+                      input#mce-TYPEOFSHOT-1(type='radio', value='Animated Shots', name='TYPEOFSHOT')
+                      label(for='mce-TYPEOFSHOT-1') Animated Shots
+                    li
+                      input#mce-TYPEOFSHOT-2(type='radio', value='Regular & Animated Shots', name='TYPEOFSHOT')
+                      label(for='mce-TYPEOFSHOT-2') Regular &amp; Animated Shots
+                | &#x9;
+                #mce-responses.clear
+                  #mce-error-response.response(style='display:none')
+                  | &#x9;&#x9;
+                  #mce-success-response.response(style='display:none')
+                div(style='position: absolute; left: -5000px;')
+                  input(type='text', name='b_1eebaff46609c8040a88eb538_0af4617a05', tabindex='-1', value='')
+                |     
+                .clear
+                  input#mc-embedded-subscribe.button(type='submit', value='Hook Me Up', name='subscribe')
+          script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+          script(type='text/javascript').
+            (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='TYPEOFSHOT';ftypes[1]='radio';}(jQuery));var $mcj = jQuery.noConflict(true);
+          // End mc_embed_signup
+          hr
+          small Cooked up by <a href="http://teamjosh.co">Team Josh</a>.
