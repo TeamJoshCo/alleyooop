@@ -11,13 +11,39 @@ html(lang="en")
     meta(name="msapplication-TileImage", content="/images/favicon.png")
     meta(property='og:image', content='/images/favicon.png')
     meta(name='twitter:image', content='/images/favicon.png')
-    link(rel='stylesheet', href='/stylesheets/the.min.css?v=1.0.0')
+    link(rel='stylesheet', href='/the.css?v=1.0.0')
     link(rel='shortcut icon', href="/images/favicon.png")
   body
     table
-        tr
-            for shot in shots
-                td(style="")
-                    a(href="#{shot.html_url}")
-                        img(src="#{shot.images.normal}", style="margin:0 auto;display:block;")
-                    div !{shot.description}
+        tr.title-row
+            td.shot-td-author
+                img(src="/favicon.png").shot-author-img
+            td.shot-td-img
+                h1 Alleyooop
+            td.shot-td-det
+                div.title-dates This #{dates}
+                div.shot-date #{(new Date()).toLocaleDateString()}
+        for shot in shots
+            tr.shot-row
+                td.shot-td-author
+                    a.shot-a-author(href="#{shot.user.links.web}")
+                        img(src="#{shot.user.avatar_url}").shot-author-img
+                    a.shot-a-dribbble(href="#{shot.user.html_url}")
+                        img(src="https://d13yacurqjgara.cloudfront.net/assets/dribbble-ball-dnld-2bd6a8870d1da1288282916f7b91e39e.png").shot-dribbble-img
+                    if shot.user.links.twitter
+                        a.shot-a-dribbble(href="#{shot.user.links.twitter}")
+                            img(src="https://g.twimg.com/Twitter_logo_blue.png").shot-twitter-img
+                td(style="").shot-td-img
+                    a(href="#{shot.html_url}").shot-a-img
+                        img(src="#{shot.images.normal}", style="").shot-img
+                td.shot-td-det
+                    a.shot-title(href="#{shot.html_url}") !{shot.title}
+                    a.shot-author(href="#{shot.user.html_url}") !{shot.user.name}
+                    hr.shot-divvy
+                    div.shot-views 
+                        img(src="http://dribbble.com/assets/icon-views-sm.png", style="margin-right:5px;").shot-views-icon
+                        | #{shot.views_count} Views
+                    div.shot-likes
+                        img(src="http://dribbble.com/assets/icon-hearts.png").shot-likes-icon
+                        | #{shot.likes_count} Likes
+                    div.shot-date #{(new Date(shot.created_at)).toLocaleDateString()}

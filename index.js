@@ -9,6 +9,7 @@ var Mailer    = require('./lib/mailer');
 
 app.use(favicon());
 // or app.use(favicon('/favicon/path'));
+app.use(require('koa-static')(__dirname + '/public'));
 app.use(compress());
 app.use(jade.middleware({
   viewPath: __dirname + '/views',
@@ -42,4 +43,4 @@ app.use(route.get('/', function* () {
   });
 }));
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3001);
