@@ -37,7 +37,7 @@ html(lang="en")
           margin: 0 0;
         }
         .title-row td{
-          border-bottom:2px solid #ddd;
+          border-bottom:1px solid #ddd;
         }
         .title-row .shot-td-img{
           text-align: left;
@@ -162,3 +162,5 @@ html(lang="en")
                         img(src="http://dribbble.com/assets/icon-hearts.png").shot-likes-icon
                         | #{shot.likes_count} Likes
                     div.shot-date #{(new Date(shot.created_at)).toLocaleDateString()}
+    div.footer(style="text-align:center;color:#aaa;font-size:0.8em;padding:2em;border-top:1px solid #ddd;")
+      | Cooked up by <a href="http://teamjosh.co" style="color:#2497EE;">Team Josh</a>.
