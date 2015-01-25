@@ -11,8 +11,123 @@ html(lang="en")
     meta(name="msapplication-TileImage", content="/images/favicon.png")
     meta(property='og:image', content='/images/favicon.png')
     meta(name='twitter:image', content='/images/favicon.png')
-    link(rel='stylesheet', href='/the.css?v=1.0.0')
     link(rel='shortcut icon', href="/images/favicon.png")
+    style.
+        body {
+        -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
+          font-family: Helvetica;
+          background-color: #ffffff;
+          max-width: 600px;
+          margin:0 auto;
+          font-size: 16px;
+        }
+        img {
+        max-width: 100%;
+        }
+        a{
+          text-decoration: none;
+        }
+        table{
+          border-collapse: collapse;
+        }
+        .title-row{
+
+        }
+        .title-row h1{
+          margin: 0 0;
+        }
+        .title-row td{
+          border-bottom:2px solid #ddd;
+        }
+        .title-row .shot-td-img{
+          text-align: left;
+        }
+        .title-dates{
+          color: #aaa;
+        }
+        .shot-row{
+
+        }
+        .shot-row:nth-child(even){
+          background: #f9fafc;
+        }
+        .shot-td-author{
+          width: 10%;
+          text-align: center;
+        }
+        .shot-a-author{
+          display: block;
+        }
+        .shot-author-img{
+          border-radius: 50%;
+          max-width: 30px;
+        }
+        .shot-a-dribbble{
+          display: block;
+        }
+        .shot-dribbble-img{
+          max-width: 20px;
+        }
+        .shot-twitter-img{
+          max-width: 16px;
+        }
+        .shot-td-img{
+          width: 40%;
+          padding: 20px;
+          text-align: center;
+        }
+        .shot-a-img{}
+        .shot-img{}
+        .shot-td-det{}
+        .shot-title{
+          display: block;
+          color: #555;
+          font-weight:700; 
+        }
+        .shot-author{
+          font-weight: 700;
+          display: block;
+          color: #2497EE;
+          font-size: 0.9em;
+        }
+        .shot-divvy{
+          width: 25%;
+          margin: 10px 75% 10px 0;
+        }
+        .shot-views{
+          font-size: 0.8em;
+          color: #aaa;
+        }
+        .shot-likes{
+          color: #aaa;
+          font-size: 0.8em;
+          height: 20px;
+          overflow: hidden;
+        }
+        .shot-date{
+          color: #FF5996;
+          font-size: 0.7em;
+          font-weight: 700;
+        }
+        .shot-views-icon{
+          margin-right: 5px;
+        }
+        .shot-likes-icon{
+          margin: 4px 5px 0 1px;
+          width: 12px;
+          vertical-align: top;
+        }
+
+
+
+        @media only screen and (max-width: 640px) {
+          body{
+            font-size: 13px;
+          }
+          .shot-author-img{
+            max-width: 25px;
+          }
+        }
   body
     table
         tr.title-row
