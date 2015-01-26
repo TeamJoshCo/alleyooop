@@ -49,3 +49,10 @@ block content
           // End mc_embed_signup
           hr
           small Cooked up by <a href="http://teamjosh.co">Team Josh</a>.
+  script.
+    (function(window, document){
+      var t = document.querySelector('table');
+      if(t.clientHeight < window.innerHeight){
+        t.style.marginTop = (window.innerHeight - t.clientHeight)/2 + 'px';
+      }
+    })(this, this.document);
