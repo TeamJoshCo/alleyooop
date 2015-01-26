@@ -78,6 +78,8 @@ h1{
     width: 100%;
   }
   .on-mobile{
-    display: inherit;
+    display: block;
+    width: 50%;
+    margin:0 auto;
   }
 }
