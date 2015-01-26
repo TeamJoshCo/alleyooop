@@ -64,12 +64,20 @@ h1{
   background: #2497EE;
 }
 
-
+.on-mobile{
+  display: none;
+}
 @media only screen and (max-width: 640px) {
   body{
     font-size: 13px;
   }
-  .shot-author-img{
-    max-width: 25px;
+  .td-example{
+    display: none;
+  }
+  .td-copy{
+    width: 100%;
+  }
+  .on-mobile{
+    display: inherit;
   }
 }
