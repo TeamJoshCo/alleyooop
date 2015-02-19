@@ -103,6 +103,7 @@ html(lang="en")
           font-size: 0.8em;
           height: 20px;
           overflow: hidden;
+          overflow-y: hidden;
         }
         .shot-date{
           color: #FF5996;
@@ -161,6 +162,5 @@ html(lang="en")
                     div.shot-likes
                         img(src="http://dribbble.com/assets/icon-hearts.png").shot-likes-icon
                         | #{shot.likes_count} Likes
-                    div.shot-date #{(new Date(shot.created_at)).toLocaleDateString()}
     div.footer(style="text-align:center;color:#aaa;font-size:0.8em;padding:2em;border-top:1px solid #ddd;")
       | Cooked up by <a href="http://teamjosh.co" style="color:#2497EE;">Team Josh</a> at <a href="http://alleyooop.info">Alleyooop.info</a>.
