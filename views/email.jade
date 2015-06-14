@@ -112,6 +112,7 @@ html(lang="en")
         }
         .shot-views-icon{
           margin-right: 5px;
+          width: 15px;
         }
         .shot-likes-icon{
           margin: 4px 5px 0 1px;
@@ -157,7 +158,7 @@ html(lang="en")
                     a.shot-author(href="#{shot.user.html_url}") !{shot.user.name}
                     hr.shot-divvy
                     div.shot-views 
-                        img(src="http://alleyooop.info/icon-views-sm.png", style="margin-right:5px;").shot-views-icon
+                        img(src="http://alleyooop.info/icon-views-sm.png", style="margin-right:5px;width:15px;").shot-views-icon
                         | #{shot.views_count} Views
                     div.shot-likes
                         img(src="http://alleyooop.info/icon-hearts.png").shot-likes-icon
