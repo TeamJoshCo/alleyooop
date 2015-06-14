@@ -145,7 +145,7 @@ html(lang="en")
                     a.shot-a-author(href="#{shot.user.links.web}")
                         img(src="#{shot.user.avatar_url}").shot-author-img
                     a.shot-a-dribbble(href="#{shot.user.html_url}")
-                        img(src="https://d13yacurqjgara.cloudfront.net/assets/dribbble-ball-dnld-2bd6a8870d1da1288282916f7b91e39e.png").shot-dribbble-img
+                        img(src="http://alleyooop.info/dribbble-ball.png").shot-dribbble-img
                     if shot.user.links.twitter
                         a.shot-a-dribbble(href="#{shot.user.links.twitter}")
                             img(src="https://g.twimg.com/Twitter_logo_blue.png").shot-twitter-img
@@ -157,10 +157,10 @@ html(lang="en")
                     a.shot-author(href="#{shot.user.html_url}") !{shot.user.name}
                     hr.shot-divvy
                     div.shot-views 
-                        img(src="http://dribbble.com/assets/icon-views-sm.png", style="margin-right:5px;").shot-views-icon
+                        img(src="http://alleyooop.info/icon-views-sm.png", style="margin-right:5px;").shot-views-icon
                         | #{shot.views_count} Views
                     div.shot-likes
-                        img(src="http://dribbble.com/assets/icon-hearts.png").shot-likes-icon
+                        img(src="http://alleyooop.info/icon-hearts.png").shot-likes-icon
                         | #{shot.likes_count} Likes
     div.footer(style="text-align:center;color:#aaa;font-size:0.8em;padding:2em;border-top:1px solid #ddd;")
       | Cooked up by <a href="http://teamjosh.co" style="color:#2497EE;">Team Josh</a> at <a href="http://alleyooop.info">Alleyooop.info</a>.
