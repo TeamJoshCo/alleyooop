@@ -20,6 +20,10 @@ table{
   max-width: 900px;
   margin:50px auto;
 }
+p a {
+  text-decoration: underline;
+}
+
 h1{
   color: white;
   font-size: 3em;
